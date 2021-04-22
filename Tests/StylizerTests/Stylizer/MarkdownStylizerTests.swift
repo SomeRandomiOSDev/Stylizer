@@ -225,6 +225,10 @@ class MarkdownStylizerTests: StylizerTestCase {
     //
 
     func testVerifyBoldItalicsAndStrikethroughPatterns() {
+        func randomLetter() -> String {
+            let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            return String(letters.shuffled()[0])
+        }
         let styleAttributes: [NSAttributedString.Key] = [
             .stylizerBold, .stylizerBold,
             .stylizerItalics, .stylizerItalics,
@@ -269,7 +273,7 @@ class MarkdownStylizerTests: StylizerTestCase {
                 }
 
                 do { // Extra control character at the beginning preceeded by a random character (e.g. a***text**)
-                    let testString = "\(Character(Unicode.Scalar(UUID().uuid.0)))\(char)\(string)"
+                    let testString = "\(randomLetter())\(char)\(string)"
                     XCTAssertEqual(stylizer.attributedStringByReplacingMatches(in: testString).string, testString, "Control Character: \"\(controlCharacter)\"") // no matches
                 }
 
