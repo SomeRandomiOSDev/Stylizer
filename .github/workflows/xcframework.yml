@@ -1,0 +1,17 @@
+name: XCFramework
+on: push
+
+jobs:
+  build:
+    name: Build
+    runs-on: macOS-latest
+    env:
+      TMPDIR: /tmp/.stylizer.xcframework.build
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        ./scripts/xcframework.sh -output ${TMPDIR}/Stylizer.xcframework

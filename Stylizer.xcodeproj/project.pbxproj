@@ -1,0 +1,1564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		DD2FBC27258BE8BB00DB3211 /* XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */;
+			buildPhases = (
+				DD2FBC33258BE8C600DB3211 /* Build XCFramework */,
+			);
+			dependencies = (
+			);
+			name = XCFramework;
+			productName = XCFramework;
+		};
+		DD86D56423D11C4B0046E63E /* Run SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DD86D56523D11C4B0046E63E /* Build configuration list for PBXAggregateTarget "Run SwiftLint" */;
+			buildPhases = (
+				DD86D56823D11C550046E63E /* Run SwiftLint */,
+			);
+			dependencies = (
+			);
+			name = "Run SwiftLint";
+			productName = "Run SwiftLint";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		DD86D54723D11B3E0046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* Stylizer.framework */; };
+		DD86D57923D11C860046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* Stylizer.framework */; };
+		DD86D59523D11CA00046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D58C23D11CA00046E63E /* Stylizer.framework */; };
+		DD8974E32625DBF600A892DF /* AppKitStylizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D22625DBF600A892DF /* AppKitStylizedLabel.swift */; };
+		DD8974E62625DBF600A892DF /* UIKitStylizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D32625DBF600A892DF /* UIKitStylizedLabel.swift */; };
+		DD8974E82625DBF600A892DF /* UIKitStylizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D32625DBF600A892DF /* UIKitStylizedLabel.swift */; };
+		DD8974EA2625DBF600A892DF /* StyleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D52625DBF600A892DF /* StyleInfo.swift */; };
+		DD8974EB2625DBF600A892DF /* StyleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D52625DBF600A892DF /* StyleInfo.swift */; };
+		DD8974EC2625DBF600A892DF /* StyleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D52625DBF600A892DF /* StyleInfo.swift */; };
+		DD8974ED2625DBF600A892DF /* StyleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D52625DBF600A892DF /* StyleInfo.swift */; };
+		DD8974EE2625DBF600A892DF /* Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D62625DBF600A892DF /* Stylizer.swift */; };
+		DD8974EF2625DBF600A892DF /* Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D62625DBF600A892DF /* Stylizer.swift */; };
+		DD8974F02625DBF600A892DF /* Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D62625DBF600A892DF /* Stylizer.swift */; };
+		DD8974F12625DBF600A892DF /* Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D62625DBF600A892DF /* Stylizer.swift */; };
+		DD8974F22625DBF600A892DF /* HTMLStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D72625DBF600A892DF /* HTMLStylizer.swift */; };
+		DD8974F32625DBF600A892DF /* HTMLStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D72625DBF600A892DF /* HTMLStylizer.swift */; };
+		DD8974F42625DBF600A892DF /* HTMLStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D72625DBF600A892DF /* HTMLStylizer.swift */; };
+		DD8974F52625DBF600A892DF /* HTMLStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D72625DBF600A892DF /* HTMLStylizer.swift */; };
+		DD8974F62625DBF600A892DF /* MarkdownStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */; };
+		DD8974F72625DBF600A892DF /* MarkdownStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */; };
+		DD8974F82625DBF600A892DF /* MarkdownStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */; };
+		DD8974F92625DBF600A892DF /* MarkdownStylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */; };
+		DD8974FA2625DBF600A892DF /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D92625DBF600A892DF /* ColorParser.swift */; };
+		DD8974FB2625DBF600A892DF /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D92625DBF600A892DF /* ColorParser.swift */; };
+		DD8974FC2625DBF600A892DF /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D92625DBF600A892DF /* ColorParser.swift */; };
+		DD8974FD2625DBF600A892DF /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974D92625DBF600A892DF /* ColorParser.swift */; };
+		DD8974FE2625DBF600A892DF /* TypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */; };
+		DD8974FF2625DBF600A892DF /* TypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */; };
+		DD8975002625DBF600A892DF /* TypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */; };
+		DD8975012625DBF600A892DF /* TypeDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */; };
+		DD8975072625DBF600A892DF /* NSFont+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DD2625DBF600A892DF /* NSFont+Stylizer.swift */; };
+		DD89750A2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */; };
+		DD89750B2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */; };
+		DD89750C2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */; };
+		DD89750D2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */; };
+		DD89750E2625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */; };
+		DD89750F2625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */; };
+		DD8975102625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */; };
+		DD8975112625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */; };
+		DD8975122625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */; };
+		DD8975132625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */; };
+		DD8975142625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */; };
+		DD8975152625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */; };
+		DD8975162625DBF600A892DF /* UIFont+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E12625DBF600A892DF /* UIFont+Stylizer.swift */; };
+		DD8975182625DBF600A892DF /* UIFont+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E12625DBF600A892DF /* UIFont+Stylizer.swift */; };
+		DD8975192625DBF600A892DF /* UIFont+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8974E12625DBF600A892DF /* UIFont+Stylizer.swift */; };
+		DD8975782625DC7200A892DF /* HTMLStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */; };
+		DD8975792625DC7200A892DF /* HTMLStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */; };
+		DD89757A2625DC7200A892DF /* HTMLStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */; };
+		DD89757B2625DC7200A892DF /* StyleInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756D2625DC7200A892DF /* StyleInfoTests.swift */; };
+		DD89757C2625DC7200A892DF /* StyleInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756D2625DC7200A892DF /* StyleInfoTests.swift */; };
+		DD89757D2625DC7200A892DF /* StyleInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756D2625DC7200A892DF /* StyleInfoTests.swift */; };
+		DD89757E2625DC7200A892DF /* StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756E2625DC7200A892DF /* StylizerTests.swift */; };
+		DD89757F2625DC7200A892DF /* StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756E2625DC7200A892DF /* StylizerTests.swift */; };
+		DD8975802625DC7200A892DF /* StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756E2625DC7200A892DF /* StylizerTests.swift */; };
+		DD8975812625DC7200A892DF /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756F2625DC7200A892DF /* ColorParserTests.swift */; };
+		DD8975822625DC7200A892DF /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756F2625DC7200A892DF /* ColorParserTests.swift */; };
+		DD8975832625DC7200A892DF /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756F2625DC7200A892DF /* ColorParserTests.swift */; };
+		DD8975842625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */; };
+		DD8975852625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */; };
+		DD8975862625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */; };
+		DD8975872625DC7200A892DF /* StylizerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975712625DC7200A892DF /* StylizerTestCase.swift */; };
+		DD8975882625DC7200A892DF /* StylizerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975712625DC7200A892DF /* StylizerTestCase.swift */; };
+		DD8975892625DC7200A892DF /* StylizerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975712625DC7200A892DF /* StylizerTestCase.swift */; };
+		DD89758B2625DC7200A892DF /* AppKitStylizedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975732625DC7200A892DF /* AppKitStylizedLabelTests.swift */; };
+		DD89758D2625DC7200A892DF /* UIKitStylizedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975742625DC7200A892DF /* UIKitStylizedLabelTests.swift */; };
+		DD89758F2625DC7200A892DF /* UIKitStylizedLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975742625DC7200A892DF /* UIKitStylizedLabelTests.swift */; };
+		DD8975902625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */; };
+		DD8975912625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */; };
+		DD8975922625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */; };
+		DD8975932625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */; };
+		DD8975942625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */; };
+		DD8975952625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */; };
+		DD89762E26263D3500A892DF /* Array+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89762D26263D3500A892DF /* Array+Stylizer.swift */; };
+		DD89762F26263D3500A892DF /* Array+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89762D26263D3500A892DF /* Array+Stylizer.swift */; };
+		DD89763026263D3500A892DF /* Array+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89762D26263D3500A892DF /* Array+Stylizer.swift */; };
+		DD89763126263D3500A892DF /* Array+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89762D26263D3500A892DF /* Array+Stylizer.swift */; };
+		DD89772C2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89772B2627834700A892DF /* NSAttributedString+StylizerUI.swift */; };
+		DD89772D2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89772B2627834700A892DF /* NSAttributedString+StylizerUI.swift */; };
+		DD89772E2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89772B2627834700A892DF /* NSAttributedString+StylizerUI.swift */; };
+		DDA03326262A27120007404E /* String+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03325262A27120007404E /* String+Stylizer.swift */; };
+		DDA03327262A27120007404E /* String+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03325262A27120007404E /* String+Stylizer.swift */; };
+		DDA03328262A27120007404E /* String+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03325262A27120007404E /* String+Stylizer.swift */; };
+		DDA03329262A27120007404E /* String+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03325262A27120007404E /* String+Stylizer.swift */; };
+		DDA03334262A28DF0007404E /* NSString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03333262A28DF0007404E /* NSString+Stylizer.swift */; };
+		DDA03335262A28DF0007404E /* NSString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03333262A28DF0007404E /* NSString+Stylizer.swift */; };
+		DDA03336262A28DF0007404E /* NSString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03333262A28DF0007404E /* NSString+Stylizer.swift */; };
+		DDA03337262A28DF0007404E /* NSString+Stylizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03333262A28DF0007404E /* NSString+Stylizer.swift */; };
+		DDA03342262A29660007404E /* NSString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03341262A29660007404E /* NSString+StylizerTests.swift */; };
+		DDA03343262A29660007404E /* NSString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03341262A29660007404E /* NSString+StylizerTests.swift */; };
+		DDA03344262A29660007404E /* NSString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03341262A29660007404E /* NSString+StylizerTests.swift */; };
+		DDA0334F262A33240007404E /* String+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0334E262A33240007404E /* String+StylizerTests.swift */; };
+		DDA03350262A33240007404E /* String+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0334E262A33240007404E /* String+StylizerTests.swift */; };
+		DDA03351262A33240007404E /* String+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0334E262A33240007404E /* String+StylizerTests.swift */; };
+		DDA03366262DEB180007404E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA03365262DEB180007404E /* Colors.xcassets */; };
+		DDA03367262DEB190007404E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA03365262DEB180007404E /* Colors.xcassets */; };
+		DDA03368262DEB190007404E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA03365262DEB180007404E /* Colors.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D53C23D11B3E0046E63E;
+			remoteInfo = Stylizer;
+		};
+		DD86D56923D11C6C0046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D57A23D11C860046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56F23D11C860046E63E;
+			remoteInfo = "Stylizer macOS";
+		};
+		DD86D59623D11CA00046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D58B23D11CA00046E63E;
+			remoteInfo = "Stylizer tvOS";
+		};
+		DD86D5D823D11DC60046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D5DA23D11DC90046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+		DD86D5DC23D11DCC0046E63E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D56423D11C4B0046E63E;
+			remoteInfo = "Run SwiftLint";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		DD5D044A261FA56400BA0FC2 /* StylizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StylizerTests-Info.plist"; path = "Plists/StylizerTests-Info.plist"; sourceTree = "<group>"; };
+		DD86D53D23D11B3E0046E63E /* Stylizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D54123D11B3E0046E63E /* Stylizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Stylizer-Info.plist"; path = "Plists/Stylizer-Info.plist"; sourceTree = "<group>"; };
+		DD86D54623D11B3E0046E63E /* StylizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57023D11C860046E63E /* Stylizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D57823D11C860046E63E /* StylizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D58C23D11CA00046E63E /* Stylizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D59423D11CA00046E63E /* StylizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5C423D11D140046E63E /* Stylizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD86D5DE23D22DB90046E63E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		DD86D5DF23D22DB90046E63E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
+		DD86D5E023D22DB90046E63E /* Stylizer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Stylizer.podspec; sourceTree = SOURCE_ROOT; };
+		DD86D5E123D22DB90046E63E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DD86D5E323D22DC30046E63E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		DD8974D22625DBF600A892DF /* AppKitStylizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitStylizedLabel.swift; sourceTree = "<group>"; };
+		DD8974D32625DBF600A892DF /* UIKitStylizedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitStylizedLabel.swift; sourceTree = "<group>"; };
+		DD8974D52625DBF600A892DF /* StyleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleInfo.swift; sourceTree = "<group>"; };
+		DD8974D62625DBF600A892DF /* Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylizer.swift; sourceTree = "<group>"; };
+		DD8974D72625DBF600A892DF /* HTMLStylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLStylizer.swift; sourceTree = "<group>"; };
+		DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStylizer.swift; sourceTree = "<group>"; };
+		DD8974D92625DBF600A892DF /* ColorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
+		DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDefinitions.swift; sourceTree = "<group>"; };
+		DD8974DD2625DBF600A892DF /* NSFont+Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFont+Stylizer.swift"; sourceTree = "<group>"; };
+		DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString.Key+Stylizer.swift"; sourceTree = "<group>"; };
+		DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Stylizer.swift"; sourceTree = "<group>"; };
+		DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Stylizer.swift"; sourceTree = "<group>"; };
+		DD8974E12625DBF600A892DF /* UIFont+Stylizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Stylizer.swift"; sourceTree = "<group>"; };
+		DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTMLStylizerTests.swift; sourceTree = "<group>"; };
+		DD89756D2625DC7200A892DF /* StyleInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleInfoTests.swift; sourceTree = "<group>"; };
+		DD89756E2625DC7200A892DF /* StylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizerTests.swift; sourceTree = "<group>"; };
+		DD89756F2625DC7200A892DF /* ColorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
+		DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownStylizerTests.swift; sourceTree = "<group>"; };
+		DD8975712625DC7200A892DF /* StylizerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizerTestCase.swift; sourceTree = "<group>"; };
+		DD8975732625DC7200A892DF /* AppKitStylizedLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKitStylizedLabelTests.swift; sourceTree = "<group>"; };
+		DD8975742625DC7200A892DF /* UIKitStylizedLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitStylizedLabelTests.swift; sourceTree = "<group>"; };
+		DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString.Key+StylizerTests.swift"; sourceTree = "<group>"; };
+		DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+StylizerTests.swift"; sourceTree = "<group>"; };
+		DD89762D26263D3500A892DF /* Array+Stylizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Stylizer.swift"; sourceTree = "<group>"; };
+		DD89772B2627834700A892DF /* NSAttributedString+StylizerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+StylizerUI.swift"; sourceTree = "<group>"; };
+		DDA03325262A27120007404E /* String+Stylizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Stylizer.swift"; sourceTree = "<group>"; };
+		DDA03333262A28DF0007404E /* NSString+Stylizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+Stylizer.swift"; sourceTree = "<group>"; };
+		DDA03341262A29660007404E /* NSString+StylizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSString+StylizerTests.swift"; sourceTree = "<group>"; };
+		DDA0334E262A33240007404E /* String+StylizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+StylizerTests.swift"; sourceTree = "<group>"; };
+		DDA03365262DEB180007404E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DDA26DBD256EA4D700E1C6D7 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
+		DDB1DE5C2405EEE300C20FED /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD86D53A23D11B3E0046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D54323D11B3E0046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD86D54723D11B3E0046E63E /* Stylizer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D56D23D11C860046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D57523D11C860046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD86D57923D11C860046E63E /* Stylizer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D58923D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D59123D11CA00046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD86D59523D11CA00046E63E /* Stylizer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C123D11D140046E63E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD5D04E52621361600BA0FC2 /* Stylizer */ = {
+			isa = PBXGroup;
+			children = (
+				DD8974DC2625DBF600A892DF /* Extensions */,
+				DD8974D42625DBF600A892DF /* Stylizer */,
+				DD8974D12625DBF600A892DF /* UI */,
+			);
+			path = Stylizer;
+			sourceTree = "<group>";
+		};
+		DD5D04F22621362400BA0FC2 /* StylizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD8975752625DC7200A892DF /* Extensions */,
+				DD89756B2625DC7200A892DF /* Stylizer */,
+				DD8975722625DC7200A892DF /* UI */,
+			);
+			path = StylizerTests;
+			sourceTree = "<group>";
+		};
+		DD86D53323D11B3E0046E63E = {
+			isa = PBXGroup;
+			children = (
+				DD86D53F23D11B3E0046E63E /* Stylizer */,
+				DD86D53E23D11B3E0046E63E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD86D53E23D11B3E0046E63E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD86D53D23D11B3E0046E63E /* Stylizer.framework */,
+				DD86D54623D11B3E0046E63E /* StylizerTests.xctest */,
+				DD86D57023D11C860046E63E /* Stylizer.framework */,
+				DD86D57823D11C860046E63E /* StylizerTests.xctest */,
+				DD86D58C23D11CA00046E63E /* Stylizer.framework */,
+				DD86D59423D11CA00046E63E /* StylizerTests.xctest */,
+				DD86D5C423D11D140046E63E /* Stylizer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD86D53F23D11B3E0046E63E /* Stylizer */ = {
+			isa = PBXGroup;
+			children = (
+				DDB1DE252405EE5F00C20FED /* Sources */,
+				DDB1DE502405EE9900C20FED /* Tests */,
+				DD86D55B23D11BA80046E63E /* Supporting Files */,
+			);
+			name = Stylizer;
+			sourceTree = "<group>";
+		};
+		DD86D55B23D11BA80046E63E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD17A9F9257744BC00D30599 /* scripts */,
+				DDA26DBD256EA4D700E1C6D7 /* workflows */,
+				DD86D5E023D22DB90046E63E /* Stylizer.podspec */,
+				DD86D5DF23D22DB90046E63E /* Package.swift */,
+				DDB1DE5C2405EEE300C20FED /* codecov.yml */,
+				DD86D5E323D22DC30046E63E /* .swiftlint.yml */,
+				DD86D5E123D22DB90046E63E /* README.md */,
+				DD86D5DE23D22DB90046E63E /* LICENSE */,
+				DD86D54123D11B3E0046E63E /* Stylizer-Info.plist */,
+				DD5D044A261FA56400BA0FC2 /* StylizerTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD8974D12625DBF600A892DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD8974D22625DBF600A892DF /* AppKitStylizedLabel.swift */,
+				DD89772B2627834700A892DF /* NSAttributedString+StylizerUI.swift */,
+				DD8974D32625DBF600A892DF /* UIKitStylizedLabel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DD8974D42625DBF600A892DF /* Stylizer */ = {
+			isa = PBXGroup;
+			children = (
+				DD8974D92625DBF600A892DF /* ColorParser.swift */,
+				DD8974D72625DBF600A892DF /* HTMLStylizer.swift */,
+				DD8974D82625DBF600A892DF /* MarkdownStylizer.swift */,
+				DD8974D52625DBF600A892DF /* StyleInfo.swift */,
+				DD8974D62625DBF600A892DF /* Stylizer.swift */,
+				DD8974DA2625DBF600A892DF /* TypeDefinitions.swift */,
+			);
+			path = Stylizer;
+			sourceTree = "<group>";
+		};
+		DD8974DC2625DBF600A892DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD89762D26263D3500A892DF /* Array+Stylizer.swift */,
+				DD8974DE2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift */,
+				DD8974DF2625DBF600A892DF /* NSAttributedString+Stylizer.swift */,
+				DD8974DD2625DBF600A892DF /* NSFont+Stylizer.swift */,
+				DD8974E02625DBF600A892DF /* NSRegularExpression+Stylizer.swift */,
+				DDA03333262A28DF0007404E /* NSString+Stylizer.swift */,
+				DDA03325262A27120007404E /* String+Stylizer.swift */,
+				DD8974E12625DBF600A892DF /* UIFont+Stylizer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD89756B2625DC7200A892DF /* Stylizer */ = {
+			isa = PBXGroup;
+			children = (
+				DD89756F2625DC7200A892DF /* ColorParserTests.swift */,
+				DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */,
+				DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */,
+				DD89756D2625DC7200A892DF /* StyleInfoTests.swift */,
+				DD8975712625DC7200A892DF /* StylizerTestCase.swift */,
+				DD89756E2625DC7200A892DF /* StylizerTests.swift */,
+			);
+			path = Stylizer;
+			sourceTree = "<group>";
+		};
+		DD8975722625DC7200A892DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD8975732625DC7200A892DF /* AppKitStylizedLabelTests.swift */,
+				DD8975742625DC7200A892DF /* UIKitStylizedLabelTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DD8975752625DC7200A892DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */,
+				DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */,
+				DDA03341262A29660007404E /* NSString+StylizerTests.swift */,
+				DDA0334E262A33240007404E /* String+StylizerTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDA03364262DEAF70007404E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDA03365262DEB180007404E /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		DDB1DE252405EE5F00C20FED /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D04E52621361600BA0FC2 /* Stylizer */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DDB1DE502405EE9900C20FED /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DDA03364262DEAF70007404E /* Resources */,
+				DD5D04F22621362400BA0FC2 /* StylizerTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD86D53823D11B3E0046E63E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D56B23D11C860046E63E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D58723D11CA00046E63E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5BF23D11D140046E63E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD86D53C23D11B3E0046E63E /* Stylizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "Stylizer" */;
+			buildPhases = (
+				DD86D53823D11B3E0046E63E /* Headers */,
+				DD86D53923D11B3E0046E63E /* Sources */,
+				DD86D53A23D11B3E0046E63E /* Frameworks */,
+				DD86D53B23D11B3E0046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D56A23D11C6C0046E63E /* PBXTargetDependency */,
+			);
+			name = Stylizer;
+			productName = Stylizer;
+			productReference = DD86D53D23D11B3E0046E63E /* Stylizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD86D54523D11B3E0046E63E /* StylizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "StylizerTests" */;
+			buildPhases = (
+				DD86D54223D11B3E0046E63E /* Sources */,
+				DD86D54323D11B3E0046E63E /* Frameworks */,
+				DD86D54423D11B3E0046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D54923D11B3E0046E63E /* PBXTargetDependency */,
+			);
+			name = StylizerTests;
+			productName = StylizerTests;
+			productReference = DD86D54623D11B3E0046E63E /* StylizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD86D56F23D11C860046E63E /* Stylizer macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "Stylizer macOS" */;
+			buildPhases = (
+				DD86D56B23D11C860046E63E /* Headers */,
+				DD86D56C23D11C860046E63E /* Sources */,
+				DD86D56D23D11C860046E63E /* Frameworks */,
+				DD86D56E23D11C860046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D5D923D11DC60046E63E /* PBXTargetDependency */,
+			);
+			name = "Stylizer macOS";
+			productName = "Stylizer macOS";
+			productReference = DD86D57023D11C860046E63E /* Stylizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD86D57723D11C860046E63E /* Stylizer macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "Stylizer macOS Tests" */;
+			buildPhases = (
+				DD86D57423D11C860046E63E /* Sources */,
+				DD86D57523D11C860046E63E /* Frameworks */,
+				DD86D57623D11C860046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D57B23D11C860046E63E /* PBXTargetDependency */,
+			);
+			name = "Stylizer macOS Tests";
+			productName = "Stylizer macOSTests";
+			productReference = DD86D57823D11C860046E63E /* StylizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD86D58B23D11CA00046E63E /* Stylizer tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "Stylizer tvOS" */;
+			buildPhases = (
+				DD86D58723D11CA00046E63E /* Headers */,
+				DD86D58823D11CA00046E63E /* Sources */,
+				DD86D58923D11CA00046E63E /* Frameworks */,
+				DD86D58A23D11CA00046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D5DB23D11DC90046E63E /* PBXTargetDependency */,
+			);
+			name = "Stylizer tvOS";
+			productName = "Stylizer tvOS";
+			productReference = DD86D58C23D11CA00046E63E /* Stylizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD86D59323D11CA00046E63E /* Stylizer tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "Stylizer tvOS Tests" */;
+			buildPhases = (
+				DD86D59023D11CA00046E63E /* Sources */,
+				DD86D59123D11CA00046E63E /* Frameworks */,
+				DD86D59223D11CA00046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D59723D11CA00046E63E /* PBXTargetDependency */,
+			);
+			name = "Stylizer tvOS Tests";
+			productName = "Stylizer tvOSTests";
+			productReference = DD86D59423D11CA00046E63E /* StylizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD86D5C323D11D140046E63E /* Stylizer watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "Stylizer watchOS" */;
+			buildPhases = (
+				DD86D5BF23D11D140046E63E /* Headers */,
+				DD86D5C023D11D140046E63E /* Sources */,
+				DD86D5C123D11D140046E63E /* Frameworks */,
+				DD86D5C223D11D140046E63E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD86D5DD23D11DCC0046E63E /* PBXTargetDependency */,
+			);
+			name = "Stylizer watchOS";
+			productName = "Stylizer watchOS";
+			productReference = DD86D5C423D11D140046E63E /* Stylizer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD86D53423D11B3E0046E63E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = SomeRandomiOSDev;
+				TargetAttributes = {
+					DD2FBC27258BE8BB00DB3211 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DD86D53C23D11B3E0046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+					DD86D54523D11B3E0046E63E = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DD86D56423D11C4B0046E63E = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DD86D56F23D11C860046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+					DD86D57723D11C860046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+					DD86D58B23D11CA00046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+					DD86D59323D11CA00046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+					DD86D5C323D11D140046E63E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "Stylizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD86D53323D11B3E0046E63E;
+			productRefGroup = DD86D53E23D11B3E0046E63E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD86D53C23D11B3E0046E63E /* Stylizer */,
+				DD86D54523D11B3E0046E63E /* StylizerTests */,
+				DD86D56F23D11C860046E63E /* Stylizer macOS */,
+				DD86D57723D11C860046E63E /* Stylizer macOS Tests */,
+				DD86D58B23D11CA00046E63E /* Stylizer tvOS */,
+				DD86D59323D11CA00046E63E /* Stylizer tvOS Tests */,
+				DD86D5C323D11D140046E63E /* Stylizer watchOS */,
+				DD86D56423D11C4B0046E63E /* Run SwiftLint */,
+				DD2FBC27258BE8BB00DB3211 /* XCFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD86D53B23D11B3E0046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D54423D11B3E0046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03366262DEB180007404E /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D56E23D11C860046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D57623D11C860046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03367262DEB190007404E /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D58A23D11CA00046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D59223D11CA00046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03368262DEB190007404E /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C223D11D140046E63E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD2FBC33258BE8C600DB3211 /* Build XCFramework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build XCFramework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/scripts/xcframework.sh -configuration ${CONFIGURATION} -output \"${BUILD_DIR}/${CONFIGURATION}-universal/Stylizer.xcframework\" \n";
+		};
+		DD86D56823D11C550046E63E /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD86D53923D11B3E0046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03334262A28DF0007404E /* NSString+Stylizer.swift in Sources */,
+				DDA03326262A27120007404E /* String+Stylizer.swift in Sources */,
+				DD8974F62625DBF600A892DF /* MarkdownStylizer.swift in Sources */,
+				DD8975162625DBF600A892DF /* UIFont+Stylizer.swift in Sources */,
+				DD8974F22625DBF600A892DF /* HTMLStylizer.swift in Sources */,
+				DD89762E26263D3500A892DF /* Array+Stylizer.swift in Sources */,
+				DD89750A2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */,
+				DD8974EA2625DBF600A892DF /* StyleInfo.swift in Sources */,
+				DD89772C2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */,
+				DD89750E2625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */,
+				DD8974E62625DBF600A892DF /* UIKitStylizedLabel.swift in Sources */,
+				DD8974FA2625DBF600A892DF /* ColorParser.swift in Sources */,
+				DD8974FE2625DBF600A892DF /* TypeDefinitions.swift in Sources */,
+				DD8974EE2625DBF600A892DF /* Stylizer.swift in Sources */,
+				DD8975122625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D54223D11B3E0046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD8975902625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */,
+				DDA03342262A29660007404E /* NSString+StylizerTests.swift in Sources */,
+				DDA0334F262A33240007404E /* String+StylizerTests.swift in Sources */,
+				DD8975812625DC7200A892DF /* ColorParserTests.swift in Sources */,
+				DD89758D2625DC7200A892DF /* UIKitStylizedLabelTests.swift in Sources */,
+				DD8975872625DC7200A892DF /* StylizerTestCase.swift in Sources */,
+				DD8975842625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */,
+				DD8975932625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */,
+				DD89757E2625DC7200A892DF /* StylizerTests.swift in Sources */,
+				DD8975782625DC7200A892DF /* HTMLStylizerTests.swift in Sources */,
+				DD89757B2625DC7200A892DF /* StyleInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D56C23D11C860046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03335262A28DF0007404E /* NSString+Stylizer.swift in Sources */,
+				DDA03327262A27120007404E /* String+Stylizer.swift in Sources */,
+				DD8974F72625DBF600A892DF /* MarkdownStylizer.swift in Sources */,
+				DD8975072625DBF600A892DF /* NSFont+Stylizer.swift in Sources */,
+				DD8974F32625DBF600A892DF /* HTMLStylizer.swift in Sources */,
+				DD89762F26263D3500A892DF /* Array+Stylizer.swift in Sources */,
+				DD89750B2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */,
+				DD8974EB2625DBF600A892DF /* StyleInfo.swift in Sources */,
+				DD89772D2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */,
+				DD8974E32625DBF600A892DF /* AppKitStylizedLabel.swift in Sources */,
+				DD89750F2625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */,
+				DD8974FB2625DBF600A892DF /* ColorParser.swift in Sources */,
+				DD8974FF2625DBF600A892DF /* TypeDefinitions.swift in Sources */,
+				DD8974EF2625DBF600A892DF /* Stylizer.swift in Sources */,
+				DD8975132625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D57423D11C860046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD8975912625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */,
+				DDA03343262A29660007404E /* NSString+StylizerTests.swift in Sources */,
+				DDA03350262A33240007404E /* String+StylizerTests.swift in Sources */,
+				DD8975822625DC7200A892DF /* ColorParserTests.swift in Sources */,
+				DD8975882625DC7200A892DF /* StylizerTestCase.swift in Sources */,
+				DD8975852625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */,
+				DD8975942625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */,
+				DD89757F2625DC7200A892DF /* StylizerTests.swift in Sources */,
+				DD8975792625DC7200A892DF /* HTMLStylizerTests.swift in Sources */,
+				DD89758B2625DC7200A892DF /* AppKitStylizedLabelTests.swift in Sources */,
+				DD89757C2625DC7200A892DF /* StyleInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D58823D11CA00046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03336262A28DF0007404E /* NSString+Stylizer.swift in Sources */,
+				DDA03328262A27120007404E /* String+Stylizer.swift in Sources */,
+				DD8974F82625DBF600A892DF /* MarkdownStylizer.swift in Sources */,
+				DD8975182625DBF600A892DF /* UIFont+Stylizer.swift in Sources */,
+				DD8974F42625DBF600A892DF /* HTMLStylizer.swift in Sources */,
+				DD89763026263D3500A892DF /* Array+Stylizer.swift in Sources */,
+				DD89750C2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */,
+				DD8974EC2625DBF600A892DF /* StyleInfo.swift in Sources */,
+				DD89772E2627834700A892DF /* NSAttributedString+StylizerUI.swift in Sources */,
+				DD8975102625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */,
+				DD8974E82625DBF600A892DF /* UIKitStylizedLabel.swift in Sources */,
+				DD8974FC2625DBF600A892DF /* ColorParser.swift in Sources */,
+				DD8975002625DBF600A892DF /* TypeDefinitions.swift in Sources */,
+				DD8974F02625DBF600A892DF /* Stylizer.swift in Sources */,
+				DD8975142625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D59023D11CA00046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD8975922625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift in Sources */,
+				DDA03344262A29660007404E /* NSString+StylizerTests.swift in Sources */,
+				DDA03351262A33240007404E /* String+StylizerTests.swift in Sources */,
+				DD8975832625DC7200A892DF /* ColorParserTests.swift in Sources */,
+				DD89758F2625DC7200A892DF /* UIKitStylizedLabelTests.swift in Sources */,
+				DD8975892625DC7200A892DF /* StylizerTestCase.swift in Sources */,
+				DD8975862625DC7200A892DF /* MarkdownStylizerTests.swift in Sources */,
+				DD8975952625DC7200A892DF /* NSAttributedString+StylizerTests.swift in Sources */,
+				DD8975802625DC7200A892DF /* StylizerTests.swift in Sources */,
+				DD89757A2625DC7200A892DF /* HTMLStylizerTests.swift in Sources */,
+				DD89757D2625DC7200A892DF /* StyleInfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD86D5C023D11D140046E63E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA03337262A28DF0007404E /* NSString+Stylizer.swift in Sources */,
+				DDA03329262A27120007404E /* String+Stylizer.swift in Sources */,
+				DD8974F92625DBF600A892DF /* MarkdownStylizer.swift in Sources */,
+				DD8975192625DBF600A892DF /* UIFont+Stylizer.swift in Sources */,
+				DD8974F52625DBF600A892DF /* HTMLStylizer.swift in Sources */,
+				DD89750D2625DBF600A892DF /* NSAttributedString.Key+Stylizer.swift in Sources */,
+				DD8974ED2625DBF600A892DF /* StyleInfo.swift in Sources */,
+				DD8975112625DBF600A892DF /* NSAttributedString+Stylizer.swift in Sources */,
+				DD8974FD2625DBF600A892DF /* ColorParser.swift in Sources */,
+				DD8975012625DBF600A892DF /* TypeDefinitions.swift in Sources */,
+				DD8974F12625DBF600A892DF /* Stylizer.swift in Sources */,
+				DD89763126263D3500A892DF /* Array+Stylizer.swift in Sources */,
+				DD8975152625DBF600A892DF /* NSRegularExpression+Stylizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD86D54923D11B3E0046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D53C23D11B3E0046E63E /* Stylizer */;
+			targetProxy = DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D56A23D11C6C0046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D56923D11C6C0046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D57B23D11C860046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56F23D11C860046E63E /* Stylizer macOS */;
+			targetProxy = DD86D57A23D11C860046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D59723D11CA00046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D58B23D11CA00046E63E /* Stylizer tvOS */;
+			targetProxy = DD86D59623D11CA00046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5D923D11DC60046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5D823D11DC60046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5DB23D11DC90046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5DA23D11DC90046E63E /* PBXContainerItemProxy */;
+		};
+		DD86D5DD23D11DCC0046E63E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D56423D11C4B0046E63E /* Run SwiftLint */;
+			targetProxy = DD86D5DC23D11DCC0046E63E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DD2FBC28258BE8BB00DB3211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD2FBC29258BE8BB00DB3211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD86D54F23D11B3E0046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		DD86D55023D11B3E0046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		DD86D55223D11B3E0046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD86D55323D11B3E0046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD86D55523D11B3E0046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                "CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD86D55623D11B3E0046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+                "CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD86D56623D11C4B0046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD86D56723D11C4B0046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD86D58223D11C870046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD86D58323D11C870046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DD86D58523D11C870046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DD86D58623D11C870046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DD86D59E23D11CA00046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		DD86D59F23D11CA00046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		DD86D5A123D11CA00046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		DD86D5A223D11CA00046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Release;
+		};
+		DD86D5CA23D11D140046E63E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		DD86D5CB23D11D140046E63E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Plists/Stylizer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizer;
+				PRODUCT_NAME = Stylizer;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD2FBC2A258BE8BB00DB3211 /* Build configuration list for PBXAggregateTarget "XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD2FBC28258BE8BB00DB3211 /* Debug */,
+				DD2FBC29258BE8BB00DB3211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D53723D11B3E0046E63E /* Build configuration list for PBXProject "Stylizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D54F23D11B3E0046E63E /* Debug */,
+				DD86D55023D11B3E0046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "Stylizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D55223D11B3E0046E63E /* Debug */,
+				DD86D55323D11B3E0046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D55423D11B3E0046E63E /* Build configuration list for PBXNativeTarget "StylizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D55523D11B3E0046E63E /* Debug */,
+				DD86D55623D11B3E0046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D56523D11C4B0046E63E /* Build configuration list for PBXAggregateTarget "Run SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D56623D11C4B0046E63E /* Debug */,
+				DD86D56723D11C4B0046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D58123D11C870046E63E /* Build configuration list for PBXNativeTarget "Stylizer macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D58223D11C870046E63E /* Debug */,
+				DD86D58323D11C870046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D58423D11C870046E63E /* Build configuration list for PBXNativeTarget "Stylizer macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D58523D11C870046E63E /* Debug */,
+				DD86D58623D11C870046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D59D23D11CA00046E63E /* Build configuration list for PBXNativeTarget "Stylizer tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D59E23D11CA00046E63E /* Debug */,
+				DD86D59F23D11CA00046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D5A023D11CA00046E63E /* Build configuration list for PBXNativeTarget "Stylizer tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D5A123D11CA00046E63E /* Debug */,
+				DD86D5A223D11CA00046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD86D5C923D11D140046E63E /* Build configuration list for PBXNativeTarget "Stylizer watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD86D5CA23D11D140046E63E /* Debug */,
+				DD86D5CB23D11D140046E63E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD86D53423D11B3E0046E63E /* Project object */;
+}

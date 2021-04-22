@@ -1,0 +1,6 @@
+Stylizer.xcodeproj/project.xcworkspace
+Stylizer.xcodeproj/xcuserdata
+
+.build
+.swiftpm
+scripts/build
