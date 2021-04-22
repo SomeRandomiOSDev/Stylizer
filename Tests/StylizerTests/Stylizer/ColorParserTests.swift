@@ -199,6 +199,7 @@ class ColorParserTests: XCTestCase {
         }
     }
 
+    #if !SWIFT_PACKAGE
     func testParseBundleColors() {
         let rgbColors: [(name: String, components: [UInt])] = [
             ("color1", [255, 0, 0, 255]),   // .red
@@ -234,6 +235,7 @@ class ColorParserTests: XCTestCase {
             }
         }
     }
+    #endif // #if !SWIFT_PACKAGE
 
     func testInvalidFormats() {
         XCTAssertNil(ColorParser.parseColor(from: "r(1)"))
