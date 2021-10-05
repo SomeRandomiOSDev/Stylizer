@@ -1,11 +1,10 @@
 //
 //  NSAttributedString+StylizerTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 @testable import Stylizer
 import XCTest
 
@@ -325,4 +324,3 @@ class NSAttributedStringStylizerTests: StylizerTestCase {
     //swiftlint:enable identifier_name
     #endif // #if canImport(UIKit) || canImport(AppKit)
 }
-#endif // #if !os(watchOS)

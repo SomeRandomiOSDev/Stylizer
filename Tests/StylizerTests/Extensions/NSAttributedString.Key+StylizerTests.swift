@@ -1,11 +1,10 @@
 //
 //  NSAttributedString.Key+StylizerTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 @testable import Stylizer
 import XCTest
 
@@ -30,4 +29,3 @@ class NSAttributedStringKeyStylizerTests: XCTestCase {
         XCTAssertEqual(NSAttributedString.Key.customStylizerPlaceholderAttributes.subtracting([customAttribute1, customAttribute2]), startingAttributes)
     }
 }
-#endif // #if !os(watchOS)

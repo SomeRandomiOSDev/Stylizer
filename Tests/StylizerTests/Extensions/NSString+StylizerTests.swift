@@ -1,11 +1,10 @@
 //
 //  NSString+StylizerTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 @testable import Stylizer
 import XCTest
 
@@ -195,4 +194,3 @@ class NSStringStylizerTests: XCTestCase {
         XCTAssertEqual(attributeCount, 0)
     }
 }
-#endif // #if !os(watchOS)
