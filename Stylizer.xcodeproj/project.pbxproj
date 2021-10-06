@@ -32,6 +32,18 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DD35B79D270CC3B60098B013 /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D5C423D11D140046E63E /* Stylizer.framework */; };
+		DD35B7A3270CC4370098B013 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA03365262DEB180007404E /* Colors.xcassets */; };
+		DD35B7A4270CC44A0098B013 /* StyleInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756D2625DC7200A892DF /* StyleInfoTests.swift */; };
+		DD35B7A5270CC44A0098B013 /* HTMLStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */; };
+		DD35B7A6270CC44A0098B013 /* MarkdownStylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */; };
+		DD35B7A7270CC44A0098B013 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756F2625DC7200A892DF /* ColorParserTests.swift */; };
+		DD35B7A8270CC44A0098B013 /* StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89756E2625DC7200A892DF /* StylizerTests.swift */; };
+		DD35B7A9270CC44D0098B013 /* NSAttributedString.Key+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975762625DC7200A892DF /* NSAttributedString.Key+StylizerTests.swift */; };
+		DD35B7AA270CC44D0098B013 /* NSAttributedString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975772625DC7200A892DF /* NSAttributedString+StylizerTests.swift */; };
+		DD35B7AB270CC44D0098B013 /* NSString+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA03341262A29660007404E /* NSString+StylizerTests.swift */; };
+		DD35B7AC270CC44D0098B013 /* String+StylizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0334E262A33240007404E /* String+StylizerTests.swift */; };
+		DD35B7AD270CC4510098B013 /* StylizerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8975712625DC7200A892DF /* StylizerTestCase.swift */; };
 		DD86D54723D11B3E0046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D53D23D11B3E0046E63E /* Stylizer.framework */; };
 		DD86D57923D11C860046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D57023D11C860046E63E /* Stylizer.framework */; };
 		DD86D59523D11CA00046E63E /* Stylizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD86D58C23D11CA00046E63E /* Stylizer.framework */; };
@@ -132,6 +144,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD35B79E270CC3B60098B013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD86D5C323D11D140046E63E;
+			remoteInfo = "Stylizer watchOS";
+		};
 		DD86D54823D11B3E0046E63E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD86D53423D11B3E0046E63E /* Project object */;
@@ -185,6 +204,15 @@
 
 /* Begin PBXFileReference section */
 		DD17A9F9257744BC00D30599 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		DD35B799270CC3B60098B013 /* StylizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD48BC64270CEC5D00D842BC /* Stylizer watchOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer watchOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BC65270CED1700D842BC /* Stylizer watchOS Tests (Full).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer watchOS Tests (Full).xctestplan"; sourceTree = "<group>"; };
+		DD48BC66270CF81300D842BC /* StylizerTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = StylizerTests.xctestplan; sourceTree = "<group>"; };
+		DD48BC67270CF83600D842BC /* StylizerTests (Full).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "StylizerTests (Full).xctestplan"; sourceTree = "<group>"; };
+		DD48BC68270CF85B00D842BC /* Stylizer macOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer macOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BC69270CF87700D842BC /* Stylizer tvOS Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer tvOS Tests.xctestplan"; sourceTree = "<group>"; };
+		DD48BC6A270CF8AD00D842BC /* Stylizer tvOS Tests (Full).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer tvOS Tests (Full).xctestplan"; sourceTree = "<group>"; };
+		DD48BC6B270CF8B300D842BC /* Stylizer macOS Tests (Full).xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Stylizer macOS Tests (Full).xctestplan"; sourceTree = "<group>"; };
 		DD5D044A261FA56400BA0FC2 /* StylizerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "StylizerTests-Info.plist"; path = "Plists/StylizerTests-Info.plist"; sourceTree = "<group>"; };
 		DD86D53D23D11B3E0046E63E /* Stylizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stylizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD86D54123D11B3E0046E63E /* Stylizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Stylizer-Info.plist"; path = "Plists/Stylizer-Info.plist"; sourceTree = "<group>"; };
@@ -234,6 +262,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD35B796270CC3B60098B013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD35B79D270CC3B60098B013 /* Stylizer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD86D53A23D11B3E0046E63E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +333,21 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		DD48BC63270CEC2800D842BC /* Test Plans */ = {
+			isa = PBXGroup;
+			children = (
+				DD48BC66270CF81300D842BC /* StylizerTests.xctestplan */,
+				DD48BC67270CF83600D842BC /* StylizerTests (Full).xctestplan */,
+				DD48BC68270CF85B00D842BC /* Stylizer macOS Tests.xctestplan */,
+				DD48BC6B270CF8B300D842BC /* Stylizer macOS Tests (Full).xctestplan */,
+				DD48BC69270CF87700D842BC /* Stylizer tvOS Tests.xctestplan */,
+				DD48BC6A270CF8AD00D842BC /* Stylizer tvOS Tests (Full).xctestplan */,
+				DD48BC64270CEC5D00D842BC /* Stylizer watchOS Tests.xctestplan */,
+				DD48BC65270CED1700D842BC /* Stylizer watchOS Tests (Full).xctestplan */,
+			);
+			path = "Test Plans";
+			sourceTree = "<group>";
+		};
 		DD5D04E52621361600BA0FC2 /* Stylizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +387,7 @@
 				DD86D58C23D11CA00046E63E /* Stylizer.framework */,
 				DD86D59423D11CA00046E63E /* StylizerTests.xctest */,
 				DD86D5C423D11D140046E63E /* Stylizer.framework */,
+				DD35B799270CC3B60098B013 /* StylizerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,7 +494,8 @@
 			children = (
 				DDA03365262DEB180007404E /* Colors.xcassets */,
 			);
-			path = Resources;
+			name = Resources;
+			path = Tests/Resources;
 			sourceTree = SOURCE_ROOT;
 		};
 		DDB1DE252405EE5F00C20FED /* Sources */ = {
@@ -458,6 +511,7 @@
 			children = (
 				DDA03364262DEAF70007404E /* Resources */,
 				DD5D04F22621362400BA0FC2 /* StylizerTests */,
+				DD48BC63270CEC2800D842BC /* Test Plans */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -496,6 +550,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DD35B798270CC3B60098B013 /* Stylizer watchOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD35B7A0270CC3B60098B013 /* Build configuration list for PBXNativeTarget "Stylizer watchOS Tests" */;
+			buildPhases = (
+				DD35B795270CC3B60098B013 /* Sources */,
+				DD35B796270CC3B60098B013 /* Frameworks */,
+				DD35B797270CC3B60098B013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD35B79F270CC3B60098B013 /* PBXTargetDependency */,
+			);
+			name = "Stylizer watchOS Tests";
+			productName = "Stylizer watchOS Tests";
+			productReference = DD35B799270CC3B60098B013 /* StylizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DD86D53C23D11B3E0046E63E /* Stylizer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD86D55123D11B3E0046E63E /* Build configuration list for PBXNativeTarget "Stylizer" */;
@@ -632,12 +704,15 @@
 		DD86D53423D11B3E0046E63E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
 					DD2FBC27258BE8BB00DB3211 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					DD35B798270CC3B60098B013 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 					DD86D53C23D11B3E0046E63E = {
 						CreatedOnToolsVersion = 12.4;
@@ -692,6 +767,7 @@
 				DD86D58B23D11CA00046E63E /* Stylizer tvOS */,
 				DD86D59323D11CA00046E63E /* Stylizer tvOS Tests */,
 				DD86D5C323D11D140046E63E /* Stylizer watchOS */,
+				DD35B798270CC3B60098B013 /* Stylizer watchOS Tests */,
 				DD86D56423D11C4B0046E63E /* Run SwiftLint */,
 				DD2FBC27258BE8BB00DB3211 /* XCFramework */,
 			);
@@ -699,6 +775,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD35B797270CC3B60098B013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD35B7A3270CC4370098B013 /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD86D53B23D11B3E0046E63E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -793,6 +877,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD35B795270CC3B60098B013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD35B7AB270CC44D0098B013 /* NSString+StylizerTests.swift in Sources */,
+				DD35B7A9270CC44D0098B013 /* NSAttributedString.Key+StylizerTests.swift in Sources */,
+				DD35B7A4270CC44A0098B013 /* StyleInfoTests.swift in Sources */,
+				DD35B7AD270CC4510098B013 /* StylizerTestCase.swift in Sources */,
+				DD35B7AC270CC44D0098B013 /* String+StylizerTests.swift in Sources */,
+				DD35B7A6270CC44A0098B013 /* MarkdownStylizerTests.swift in Sources */,
+				DD35B7A8270CC44A0098B013 /* StylizerTests.swift in Sources */,
+				DD35B7AA270CC44D0098B013 /* NSAttributedString+StylizerTests.swift in Sources */,
+				DD35B7A7270CC44A0098B013 /* ColorParserTests.swift in Sources */,
+				DD35B7A5270CC44A0098B013 /* HTMLStylizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD86D53923D11B3E0046E63E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -936,6 +1037,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD35B79F270CC3B60098B013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD86D5C323D11D140046E63E /* Stylizer watchOS */;
+			targetProxy = DD35B79E270CC3B60098B013 /* PBXContainerItemProxy */;
+		};
 		DD86D54923D11B3E0046E63E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DD86D53C23D11B3E0046E63E /* Stylizer */;
@@ -987,6 +1093,46 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD35B7A1270CC3B60098B013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		DD35B7A2270CC3B60098B013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
+				PRODUCT_NAME = StylizerTests;
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
 		};
@@ -1487,6 +1633,15 @@
 			buildConfigurations = (
 				DD2FBC28258BE8BB00DB3211 /* Debug */,
 				DD2FBC29258BE8BB00DB3211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD35B7A0270CC3B60098B013 /* Build configuration list for PBXNativeTarget "Stylizer watchOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD35B7A1270CC3B60098B013 /* Debug */,
+				DD35B7A2270CC3B60098B013 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

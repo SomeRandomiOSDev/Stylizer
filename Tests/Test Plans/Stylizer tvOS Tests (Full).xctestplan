@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "9426875A-217D-47C2-A3F7-829E61BA10E5",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Stylizer.xcodeproj",
+          "identifier" : "DD86D58B23D11CA00046E63E",
+          "name" : "Stylizer tvOS"
+        }
+      ]
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "FULL_TESTS",
+        "value" : "1"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Stylizer.xcodeproj",
+        "identifier" : "DD86D59323D11CA00046E63E",
+        "name" : "Stylizer tvOS Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

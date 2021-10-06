@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "65B2F28D-D611-4FAD-AF5D-3FE5A649152F",
+      "name" : "Default",
+      "options" : {
+        "environmentVariableEntries" : [
+          {
+            "key" : "FULL_TESTS",
+            "value" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Stylizer.xcodeproj",
+          "identifier" : "DD86D56F23D11C860046E63E",
+          "name" : "Stylizer macOS"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Stylizer.xcodeproj",
+        "identifier" : "DD86D57723D11C860046E63E",
+        "name" : "Stylizer macOS Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

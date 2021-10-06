@@ -10,25 +10,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD86D58B23D11CA00046E63E"
-            BuildableName = "Stylizer.framework"
-            BlueprintName = "Stylizer tvOS"
-            ReferencedContainer = "container:Stylizer.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/Test Plans/Stylizer tvOS Tests.xctestplan"
+            reference = "container:Tests/Test Plans/Stylizer watchOS Tests.xctestplan"
             default = "YES">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/Test Plans/Stylizer tvOS Tests (Full).xctestplan">
+            reference = "container:Tests/Test Plans/Stylizer watchOS Tests (Full).xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
@@ -36,9 +25,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD86D59323D11CA00046E63E"
+               BlueprintIdentifier = "DD35B798270CC3B60098B013"
                BuildableName = "StylizerTests.xctest"
-               BlueprintName = "Stylizer tvOS Tests"
+               BlueprintName = "Stylizer watchOS Tests"
                ReferencedContainer = "container:Stylizer.xcodeproj">
             </BuildableReference>
          </TestableReference>

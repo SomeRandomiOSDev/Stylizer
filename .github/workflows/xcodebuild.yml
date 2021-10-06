@@ -20,7 +20,7 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer" -destination "platform=iOS Simulator,name=iPhone 12 Pro Max" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer" -testPlan "StylizerTests" -destination "platform=iOS Simulator,name=iPhone 12 Pro Max" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
   maccatalyst:
     name: Mac Catalyst
@@ -36,7 +36,7 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer" -testPlan "StylizerTests" -destination "platform=macOS,variant=Mac Catalyst" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
   macos:
     name: macOS
@@ -52,7 +52,7 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer macOS" -configuration Debug test
+        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer macOS" -testPlan "Stylizer macOS Tests" -configuration Debug test
 
   tvos:
     name: tvOS
@@ -72,11 +72,11 @@ jobs:
 
     - name: Test
       run: |
-        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer tvOS" -destination "platform=tvOS Simulator,name=Apple TV 4K" -configuration Debug ONLY_ACTIVE_ARCH=YES test
+        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer tvOS" -testPlan "Stylizer tvOS Tests" -destination "platform=tvOS Simulator,name=Apple TV 4K" -configuration Debug ONLY_ACTIVE_ARCH=YES test
 
   watchos:
     name: watchOS
-    runs-on: macOS-latest
+    runs-on: macOS-11
 
     steps:
     - name: Checkout Code
@@ -89,3 +89,7 @@ jobs:
     - name: Build watchOS Simulator
       run: |
         xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer watchOS" -destination "generic/platform=watchOS Simulator" -configuration Debug
+
+    - name: Test
+      run: |
+        xcodebuild -project Stylizer.xcodeproj -scheme "Stylizer watchOS" -testPlan "Stylizer watchOS Tests" -destination "platform=watchOS Simulator,name=Apple Watch Series 6 - 44mm" -configuration Debug ONLY_ACTIVE_ARCH=YES test

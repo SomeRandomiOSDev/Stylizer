@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "595D9B75-4C6C-42E2-8E4A-F39FB784D17F",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Stylizer.xcodeproj",
+          "identifier" : "DD86D5C323D11D140046E63E",
+          "name" : "Stylizer watchOS"
+        }
+      ]
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "FULL_TESTS",
+        "value" : "1"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Stylizer.xcodeproj",
+        "identifier" : "DD35B798270CC3B60098B013",
+        "name" : "Stylizer watchOS Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
