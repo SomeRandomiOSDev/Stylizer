@@ -1,11 +1,10 @@
 //
 //  ColorParserTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 import CoreGraphics
 @testable import Stylizer
 import XCTest
@@ -455,4 +454,3 @@ class ColorParserTests: XCTestCase {
     }
     //swiftlint:enable identifier_name
 }
-#endif // #if !os(watchOS)

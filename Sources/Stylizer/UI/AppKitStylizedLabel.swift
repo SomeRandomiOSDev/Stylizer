@@ -178,7 +178,9 @@ import AppKit
         self.isSelectable = false
         self.lineBreakMode = .byWordWrapping
 
-        if #available(macOS 10.15, *) {
+        if #available(macOS 11.0, *) {
+            self.lineBreakStrategy = .standard
+        } else if #available(macOS 10.15, *) {
             self.lineBreakStrategy = .pushOut
         }
     }

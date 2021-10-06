@@ -1,11 +1,10 @@
 //
 //  MarkdownStylizerTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 import Stylizer
 import XCTest
 
@@ -495,4 +494,3 @@ class MarkdownStylizerTests: StylizerTestCase {
         return stylizers
     }
 }
-#endif // #if !os(watchOS)

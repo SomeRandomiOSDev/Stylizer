@@ -289,6 +289,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD35B785270CB57A0098B013 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DD8975712625DC7200A892DF /* StylizerTestCase.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DD5D04E52621361600BA0FC2 /* Stylizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +310,7 @@
 		DD5D04F22621362400BA0FC2 /* StylizerTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD35B785270CB57A0098B013 /* Common */,
 				DD8975752625DC7200A892DF /* Extensions */,
 				DD89756B2625DC7200A892DF /* Stylizer */,
 				DD8975722625DC7200A892DF /* UI */,
@@ -403,7 +412,6 @@
 				DD89756C2625DC7200A892DF /* HTMLStylizerTests.swift */,
 				DD8975702625DC7200A892DF /* MarkdownStylizerTests.swift */,
 				DD89756D2625DC7200A892DF /* StyleInfoTests.swift */,
-				DD8975712625DC7200A892DF /* StylizerTestCase.swift */,
 				DD89756E2625DC7200A892DF /* StylizerTests.swift */,
 			);
 			path = Stylizer;
@@ -625,7 +633,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = SomeRandomiOSDev;
 				TargetAttributes = {
 					DD2FBC27258BE8BB00DB3211 = {
@@ -637,6 +645,7 @@
 					};
 					DD86D54523D11B3E0046E63E = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1300;
 					};
 					DD86D56423D11C4B0046E63E = {
 						CreatedOnToolsVersion = 12.4;
@@ -647,7 +656,7 @@
 					};
 					DD86D57723D11C860046E63E = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1300;
 					};
 					DD86D58B23D11CA00046E63E = {
 						CreatedOnToolsVersion = 12.4;
@@ -655,7 +664,7 @@
 					};
 					DD86D59323D11CA00046E63E = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1300;
 					};
 					DD86D5C323D11D140046E63E = {
 						CreatedOnToolsVersion = 12.4;
@@ -1014,7 +1023,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1083,7 +1092,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1117,7 +1126,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1143,7 +1152,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1168,7 +1177,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                "CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1178,6 +1188,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
 				PRODUCT_NAME = StylizerTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1186,7 +1198,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                "CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1196,6 +1209,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.somerandomiosdev.stylizertests;
 				PRODUCT_NAME = StylizerTests;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1220,7 +1234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1247,7 +1261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1274,7 +1288,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
@@ -1297,7 +1311,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Plists/StylizerTests-Info.plist";
@@ -1318,7 +1332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1345,7 +1359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1415,7 +1429,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1443,7 +1457,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-                CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

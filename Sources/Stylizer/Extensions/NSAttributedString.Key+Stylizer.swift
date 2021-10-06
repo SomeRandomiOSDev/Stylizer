@@ -20,7 +20,7 @@ extension NSAttributedString.Key {
     // MARK: Internal Properties
 
     internal private(set) static var customStylizerPlaceholderAttributes: Set<NSAttributedString.Key> = []
-    internal static let predefinedStylizerPlaceholderAttributes: [NSAttributedString.Key] = [.stylizerBold, .stylizerItalics, .stylizerStrikethrough, .stylizerUnderline, .stylizerSuperscript, .stylizerTextColor, .stylizerBackgroundColor, .stylizerLink]
+    internal static let predefinedStylizerPlaceholderAttributes: [NSAttributedString.Key] = [.stylizerBold, .stylizerItalics, .stylizerStrikethrough, .stylizerUnderline, .stylizerSuperscript, .stylizerTextColor, .stylizerBackgroundColor, .stylizerLink, .stylizerWritingDirection]
 
     // MARK: Public Constants
 
@@ -75,6 +75,14 @@ extension NSAttributedString.Key {
     /// on macOS if the parsed link contains an optional title, this is added as an
     /// additional attribute using the AppKit `.toolTip` attribute
     public static let stylizerLink = NSAttributedString.Key(rawValue: "com.stylizer.link")
+
+    /// Writing direction placeholder attribute. This is used to signify that the text
+    /// that this attribute applies should use the specified writing direction. This
+    /// attribute is substituted with the `.writingDirection` UIKit attribute with the
+    /// value of the parsed writing direction, or'ed with `NSWritingDirectionEmbedding`.
+    /// As this attribute is not available on macOS this placeholder is simply removed
+    /// prior to rendering.
+    public static let stylizerWritingDirection = NSAttributedString.Key(rawValue: "com.stylizer.writingdirection")
 
     // MARK: Public Methods
 

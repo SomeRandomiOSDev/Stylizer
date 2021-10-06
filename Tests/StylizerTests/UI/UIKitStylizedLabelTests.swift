@@ -1,6 +1,6 @@
 //
 //  UIKitStylizedLabelTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
@@ -372,7 +372,7 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
         class DoubleUnderlineStylizer: Stylizer {
 
             init() {
-                super.init(styleInfo: [.init(expression: .init(verifiedPattern: "<double-underline>(.*?)<\\/double-underline>"), replacementTemplate: "$1") { match, string in
+                super.init(styleInfo: [.init(expression: .init(verifiedPattern: "<double-underline>(.*?)<\\/double-underline>"), replacementTemplate: "$1") { _, _ in
                     [UIKitStylizedLabelTests.customAttribute: NSUnderlineStyle.double.rawValue]
                 }])
             }
@@ -386,12 +386,12 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
             NSRange(location: 58, length: 13), NSRange(location: 73, length: 9),
             NSRange(location: 84, length: 16), NSRange(location: 100, length: 15),
             NSRange(location: 115, length: 9), NSRange(location: 126, length: 14),
-            NSRange(location: 142, length: 4)
+            NSRange(location: 142, length: 4), NSRange(location: 148, length: 13)
         ]
 
         let label = StylizedLabel()
         label.stylizers = [HTMLStylizer(), DoubleUnderlineStylizer()]
-        label.text = "<b>bold text</b>, <strong>also bold text</strong>, <i>italic text</i>, <em>also italic text</em>, <del>strikethrough</del>, <ins>underline</ins>, <double-underline>double underline</double-underline>, <sup>superscript</sup>, <p style=\"color:blue;\">blue text</p>, <p style=\"background-color:red;\">red background</p>, <a href=\"https://www.apple.com\" title=\"title\">link</a>"
+        label.text = "<b>bold text</b>, <strong>also bold text</strong>, <i>italic text</i>, <em>also italic text</em>, <del>strikethrough</del>, <ins>underline</ins>, <double-underline>double underline</double-underline>, <sup>superscript</sup>, <p style=\"color:blue;\">blue text</p>, <p style=\"background-color:red;\">red background</p>, <a href=\"https://www.apple.com\" title=\"title\">link</a>, <p dir=\"rtl\">right-to-left</p>"
 
         label.attributedText?.enumerateAttributes(in: label.attributedText?.stringRange ?? NSRange(location: 0, length: 0), options: []) { attributes, range, _ in
             if let index = expectedRanges.firstIndex(of: range) {
@@ -440,6 +440,11 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
                     XCTAssertTrue((attributes[.link] as? URL)?.absoluteString == "https://www.apple.com" || (attributes[.link] as? String) == "https://www.apple.com")
                     enumeratedRanges.append(range)
 
+                case 11: // writing direction
+                    XCTAssertEqual(attributes.count, 1)
+                    XCTAssertEqual((attributes[.writingDirection] as? NSNumber)?.intValue, NSWritingDirection.rightToLeft.rawValue | NSWritingDirectionFormatType.embedding.rawValue)
+                    enumeratedRanges.append(range)
+
                 default: break
                 }
             }
@@ -450,7 +455,7 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
         //
 
         label.stylizerDelegate = self
-        label.text = "<b>bold text</b>, <strong>also bold text</strong>, <i>italic text</i>, <em>also italic text</em>, <del>strikethrough</del>, <ins>underline</ins>, <double-underline>double underline</double-underline>, <sup>superscript</sup>, <p style=\"color:blue;\">blue text</p>, <p style=\"background-color:red;\">red background</p>, <a href=\"https://www.apple.com\" title=\"title\">link</a>"
+        label.text = "<b>bold text</b>, <strong>also bold text</strong>, <i>italic text</i>, <em>also italic text</em>, <del>strikethrough</del>, <ins>underline</ins>, <double-underline>double underline</double-underline>, <sup>superscript</sup>, <p style=\"color:blue;\">blue text</p>, <p style=\"background-color:red;\">red background</p>, <a href=\"https://www.apple.com\" title=\"title\">link</a>, <p dir=\"rtl\">right-to-left</p>"
 
         enumeratedRanges = []
         expectedRanges[7] = NSRange(location: 102, length: 11)
@@ -501,6 +506,11 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
                 case 10: // link
                     XCTAssertEqual(attributes.count, 1)
                     XCTAssertEqual(attributes[.expansion] as? Double, 0.75)
+                    enumeratedRanges.append(range)
+
+                case 11: // writing direction
+                    XCTAssertEqual(attributes.count, 1)
+                    XCTAssertEqual(attributes[.underlineStyle] as? Int, 2)
                     enumeratedRanges.append(range)
 
                 default: break
@@ -594,6 +604,14 @@ class UIKitStylizedLabelTests: XCTestCase, StylizedLabelDelegate {
             XCTAssertTrue((proposedAttributes[.link] as? URL)?.absoluteString == "https://www.apple.com" || (proposedAttributes[.link] as? String) == "https://www.apple.com")
 
             return [.expansion: 0.75]
+
+        case .stylizerWritingDirection:
+            XCTAssertEqual(value as? String, "rtl")
+            XCTAssertEqual(range, NSRange(location: 148, length: 13))
+            XCTAssertEqual(proposedAttributes.count, 1)
+            XCTAssertEqual((proposedAttributes[.writingDirection] as? NSNumber)?.intValue, NSWritingDirection.rightToLeft.rawValue | NSWritingDirectionFormatType.embedding.rawValue)
+
+            return [.underlineStyle: 2]
 
         default:
             XCTFail("Encountered an unexpected attribute: \(attribute)")

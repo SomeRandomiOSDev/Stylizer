@@ -104,6 +104,7 @@ extension NSAttributedString {
             replaceColorPlaceholderAttribute(.stylizerTextColor, in: mutableStylizedText, with: .foregroundColor, placeholderAttributeOverrideProvider: placeholderAttributeOverrideProvider)
             replaceColorPlaceholderAttribute(.stylizerBackgroundColor, in: mutableStylizedText, with: .backgroundColor, placeholderAttributeOverrideProvider: placeholderAttributeOverrideProvider)
             replaceLinkPlaceholderAttributes(in: mutableStylizedText, placeholderAttributeOverrideProvider: placeholderAttributeOverrideProvider)
+            replaceWritingDirectionPlaceholderAttribute(in: mutableStylizedText, placeholderAttributeOverrideProvider: placeholderAttributeOverrideProvider)
             replaceCustomPlaceholderAttributes(in: mutableStylizedText, customAttributesProvider: customAttributesProvider, placeholderAttributeOverrideProvider: placeholderAttributeOverrideProvider)
 
             stylizedText = NSAttributedString(attributedString: mutableStylizedText)
@@ -210,6 +211,37 @@ extension NSAttributedString {
 
             if let placeholderAttributeOverrideProvider = placeholderAttributeOverrideProvider,
                let replacementAttributes = placeholderAttributeOverrideProvider(.stylizerLink, value, range, proposedAttributes) {
+                proposedAttributes = replacementAttributes
+            }
+
+            stylizedText.addAttributes(proposedAttributes, range: range)
+        }
+    }
+
+    private func replaceWritingDirectionPlaceholderAttribute(in stylizedText: NSMutableAttributedString, placeholderAttributeOverrideProvider: StylizerPlaceholderAttributeOverrideProvider?) {
+        stylizedText.enumerateAttributes(in: stylizedText.stringRange, options: []) { attributes, range, _ in
+            guard let value = attributes[.stylizerWritingDirection] else { return }
+
+            stylizedText.removeAttribute(.stylizerWritingDirection, range: range)
+
+            var proposedAttributes: [NSAttributedString.Key: Any] = [:]
+            if let value = value as? String {
+                #if canImport(UIKit)
+                let writingDirection: NSWritingDirection
+                switch value.lowercased() {
+                case "ltr": writingDirection = .leftToRight
+                case "rtl": writingDirection = .rightToLeft
+                default: writingDirection = .natural
+                }
+
+                proposedAttributes = [.writingDirection: NSNumber(value: writingDirection.rawValue | NSWritingDirectionFormatType.embedding.rawValue)]
+                #else
+                proposedAttributes = [:]
+                #endif
+            }
+
+            if let placeholderAttributeOverrideProvider = placeholderAttributeOverrideProvider,
+               let replacementAttributes = placeholderAttributeOverrideProvider(.stylizerWritingDirection, value, range, proposedAttributes) {
                 proposedAttributes = replacementAttributes
             }
 

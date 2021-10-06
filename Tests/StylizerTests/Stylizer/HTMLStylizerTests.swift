@@ -1,11 +1,10 @@
 //
 //  HTMLStylizerTests.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 @testable import Stylizer
 import XCTest
 
@@ -40,7 +39,11 @@ class HTMLStylizerTests: StylizerTestCase {
     }
 
     func testAllHTMLStylePermutations() {
-        for styles in HTMLStylizerTests.allStyles {
+        let allStyles = HTMLStylizerTests.allStyles
+        let styleCount = allStyles.count
+
+        for (i, styles) in allStyles.enumerated() {
+            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllNestedHTMLStyles]' (\(i)/\(styleCount))")
             let stylizers = HTMLStylizerTests.stylizers(for: styles)
 
             HTMLStylizerTests.iterateAllPermutations(for: styles) { finalText, permutations in
@@ -281,6 +284,34 @@ class HTMLStylizerTests: StylizerTestCase {
                                 XCTAssertNil(attributedText.attribute(HTMLStylizer.Style.link.attributeKey, at: i, effectiveRange: nil))
                             }
                         }
+
+                        if styles.contains(.writingDirection) {
+                            guard let writingDirectionRange = attributedText.string.range(of: "writingdirection").map({ NSRange($0, in: attributedText.string) }) else {
+                                XCTFail("Unable to find range of string \"writingdirection\" in \"\(attributedText.string)\"")
+                                continue
+                            }
+
+                            var range = NSRange(location: 0, length: 0)
+                            let attribute = attributedText.attribute(HTMLStylizer.Style.writingDirection.attributeKey, at: writingDirectionRange.location, effectiveRange: &range)
+
+                            XCTAssertEqual(writingDirectionRange, range)
+                            XCTAssertNotNil(attribute)
+
+                            if writingDirectionRange.lowerBound > 0 {
+                                for i in 0 ..< writingDirectionRange.lowerBound {
+                                    XCTAssertNil(attributedText.attribute(HTMLStylizer.Style.writingDirection.attributeKey, at: i, effectiveRange: &range), "Expected not to find writing direction attributes outside of the perscribed range { \(writingDirectionRange.lowerBound), \(writingDirectionRange.upperBound) }")
+                                }
+                            }
+                            if writingDirectionRange.upperBound < attributedText.length - 1 {
+                                for i in writingDirectionRange.upperBound ..< attributedText.length {
+                                    XCTAssertNil(attributedText.attribute(HTMLStylizer.Style.writingDirection.attributeKey, at: i, effectiveRange: &range), "Expected not to find writing direction attributes outside of the perscribed range { \(writingDirectionRange.lowerBound), \(writingDirectionRange.upperBound) }")
+                                }
+                            }
+                        } else {
+                            for i in 0 ..< attributedText.length {
+                                XCTAssertNil(attributedText.attribute(HTMLStylizer.Style.writingDirection.attributeKey, at: i, effectiveRange: nil))
+                            }
+                        }
                     }
                 }
             }
@@ -291,8 +322,11 @@ class HTMLStylizerTests: StylizerTestCase {
 
     func testAllNestedHTMLStyles() throws {
         let color = try XCTUnwrap(ColorParser.parseColor(from: "crimson"))
+        let allStyles = HTMLStylizerTests.allStyles.filter { $0.count > 1 }
+        let styleCount = allStyles.count
 
-        for styles in HTMLStylizerTests.allStyles.filter({ $0.count > 1 }) {
+        for (i, styles) in allStyles.enumerated() {
+            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllNestedHTMLStyles]' (\(i)/\(styleCount))")
             let stylizers = HTMLStylizerTests.stylizers(for: styles)
 
             HTMLStylizerTests.iterateAllNestedPermutations(for: styles) { finalText, permutations in
@@ -341,6 +375,10 @@ class HTMLStylizerTests: StylizerTestCase {
                             case "link" where styles.contains(.link):
                                 AssertAttributedString(attributedText, containsAttribute: (.stylizerLink, ["https://link.com"], ["https://link.com", "optional"]), inRange: range)
                                 AssertAttributedString(attributedText, doesNotContainAttribute: .stylizerLink, inRange: NSRange(location: 0, length: range.lowerBound))
+
+                            case "writingdirection" where styles.contains(.writingDirection):
+                                AssertAttributedString(attributedText, containsAttribute: (.stylizerWritingDirection, NSWritingDirection.leftToRight, NSWritingDirection.rightToLeft), inRange: range)
+                                AssertAttributedString(attributedText, doesNotContainAttribute: .stylizerWritingDirection, inRange: NSRange(location: 0, length: range.lowerBound))
 
                             default:
                                 XCTFail("Unexpected issue while processing attributes for \"\(component)\" in \"\(finalText)\"")
@@ -513,4 +551,3 @@ class HTMLStylizerTests: StylizerTestCase {
         return stylizers
     }
 }
-#endif // #if !os(watchOS)

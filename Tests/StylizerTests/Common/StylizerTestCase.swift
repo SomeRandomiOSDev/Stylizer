@@ -1,11 +1,10 @@
 //
 //  StylizerTestCase.swift
-//  Stylizer
+//  StylizerTests
 //
 //  Copyright © 2021 SomeRandomiOSDev. All rights reserved.
 //
 
-#if !os(watchOS)
 @testable import Stylizer
 import XCTest
 
@@ -34,19 +33,21 @@ class StylizerTestCase: XCTestCase {
         let permutedStyles = allPermutations(of: inputStyles)
 
         DispatchQueue.concurrentPerform(iterations: permutedStyles.count) { i in
-            let styles = permutedStyles[i]
-            let key = styles.map { $0.patternStrings.text }.joined(separator: ", ")
-            let values: [[String]] = styles.reduce(into: [[]]) { result, style in
-                result = result.reduce(into: []) { next, current in
-                    if inputStyles.contains(style) {
-                        style.patternStrings.patterns.forEach { next.append(current + [$0]) }
-                    } else {
-                        next.append(current + [style.patternStrings.text])
+            autoreleasepool {
+                let styles = permutedStyles[i]
+                let key = styles.map { $0.patternStrings.text }.joined(separator: ", ")
+                let values: [[String]] = styles.reduce(into: [[]]) { result, style in
+                    result = result.reduce(into: []) { next, current in
+                        if inputStyles.contains(style) {
+                            style.patternStrings.patterns.forEach { next.append(current + [$0]) }
+                        } else {
+                            next.append(current + [style.patternStrings.text])
+                        }
                     }
                 }
-            }
 
-            block(key, values.map { $0.joined(separator: ", ") })
+                block(key, values.map { $0.joined(separator: ", ") })
+            }
         }
     }
 
@@ -55,27 +56,29 @@ class StylizerTestCase: XCTestCase {
         let permutedStyles = allPermutations(of: toArray(inputStyles))
 
         DispatchQueue.concurrentPerform(iterations: permutedStyles.count) { i in
-            let styles = permutedStyles[i]
-            let key = styles.map { $0.nestableStrings.text }.joined(separator: ", ")
-            let values: [[String]] = styles.reduce(into: [[]]) { result, style in
-                result = result.reduce(into: []) { next, current in
-                    if inputStyles.contains(style) {
-                        if C.Element.checkForOverlap {
-                            style.nestableStrings.patterns.forEach { pattern in
-                                if current.first(where: { $0.first == pattern.first }) == nil {
-                                    next.append(current + [pattern])
+            autoreleasepool {
+                let styles = permutedStyles[i]
+                let key = styles.map { $0.nestableStrings.text }.joined(separator: ", ")
+                let values: [[String]] = styles.reduce(into: [[]]) { result, style in
+                    result = result.reduce(into: []) { next, current in
+                        if inputStyles.contains(style) {
+                            if C.Element.checkForOverlap {
+                                style.nestableStrings.patterns.forEach { pattern in
+                                    if current.first(where: { $0.first == pattern.first }) == nil {
+                                        next.append(current + [pattern])
+                                    }
                                 }
+                            } else {
+                                style.nestableStrings.patterns.forEach { next.append(current + [$0]) }
                             }
                         } else {
-                            style.nestableStrings.patterns.forEach { next.append(current + [$0]) }
+                            next.append(current + [style.nestableStrings.text])
                         }
-                    } else {
-                        next.append(current + [style.nestableStrings.text])
                     }
                 }
-            }
 
-            block(key, values.map { $0.reduce("") { $0.contains("%@") ? $0.replacingOccurrences(of: "%@", with: ", \($1)") : $1 }.replacingOccurrences(of: "%@", with: "") })
+                block(key, values.map { $0.reduce("") { $0.contains("%@") ? $0.replacingOccurrences(of: "%@", with: ", \($1)") : $1 }.replacingOccurrences(of: "%@", with: "") })
+            }
         }
     }
 
@@ -201,6 +204,7 @@ extension HTMLStylizer.Style: PatternStringsConvertible {
         case .textColor: strings = ("textcolor", ["<p style=\"color:crimson;\">textcolor</p>"])
         case .backgroundColor: strings = ("backgroundcolor", ["<p style=\"background-color:crimson;\">backgroundcolor</p>"])
         case .link: strings = ("link", ["<a href=\"https://link.com\">link</a>", "<a href=\"https://link.com\" title=\"optional\">link</a>"])
+        case .writingDirection: strings = ("writingdirection", ["<p dir=\"ltr\">writingdirection</p>"])
         }
 
         return strings
@@ -250,9 +254,9 @@ extension HTMLStylizer.Style: NestableStringsConvertible {
         case .textColor: strings = ("textcolor", ["<p style=\"color:crimson;\">textcolor%@</p>"])
         case .backgroundColor: strings = ("backgroundcolor", ["<p style=\"background-color:crimson;\">backgroundcolor%@</p>"])
         case .link: strings = ("link", ["<a href=\"https://link.com\">link%@</a>", "<a href=\"https://link.com\" title=\"optional\">link%@</a>"])
+        case .writingDirection: strings = ("writingdirection", ["<p dir=\"ltr\">writingdirection%@</p>"])
         }
 
         return strings
     }
 }
-#endif // #if !os(watchOS)
