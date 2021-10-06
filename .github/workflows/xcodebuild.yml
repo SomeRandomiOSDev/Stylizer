@@ -76,7 +76,7 @@ jobs:
 
   watchos:
     name: watchOS
-    runs-on: macOS-latest
+    runs-on: macOS-11
 
     steps:
     - name: Checkout Code
