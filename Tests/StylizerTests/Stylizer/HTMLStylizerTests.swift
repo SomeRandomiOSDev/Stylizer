@@ -39,11 +39,11 @@ class HTMLStylizerTests: StylizerTestCase {
     }
 
     func testAllHTMLStylePermutations() {
-        let allStyles = HTMLStylizerTests.allStyles
+        let allStyles = HTMLStylizerTests.setupForCurrentTestPlan(HTMLStylizerTests.allStyles, max: 250)
         let styleCount = allStyles.count
 
         for (i, styles) in allStyles.enumerated() {
-            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllNestedHTMLStyles]' (\(i)/\(styleCount))")
+            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllHTMLStylePermutations]' (\(i + 1)/\(styleCount))")
             let stylizers = HTMLStylizerTests.stylizers(for: styles)
 
             HTMLStylizerTests.iterateAllPermutations(for: styles) { finalText, permutations in
@@ -322,11 +322,11 @@ class HTMLStylizerTests: StylizerTestCase {
 
     func testAllNestedHTMLStyles() throws {
         let color = try XCTUnwrap(ColorParser.parseColor(from: "crimson"))
-        let allStyles = HTMLStylizerTests.allStyles.filter { $0.count > 1 }
+        let allStyles = HTMLStylizerTests.setupForCurrentTestPlan(HTMLStylizerTests.allStyles.filter { $0.count > 1 }, max: 250)
         let styleCount = allStyles.count
 
         for (i, styles) in allStyles.enumerated() {
-            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllNestedHTMLStyles]' (\(i)/\(styleCount))")
+            print("Test Case '-[StylizerTests.HTMLStylizerTests testAllNestedHTMLStyles]' (\(i + 1)/\(styleCount))")
             let stylizers = HTMLStylizerTests.stylizers(for: styles)
 
             HTMLStylizerTests.iterateAllNestedPermutations(for: styles) { finalText, permutations in
@@ -377,7 +377,7 @@ class HTMLStylizerTests: StylizerTestCase {
                                 AssertAttributedString(attributedText, doesNotContainAttribute: .stylizerLink, inRange: NSRange(location: 0, length: range.lowerBound))
 
                             case "writingdirection" where styles.contains(.writingDirection):
-                                AssertAttributedString(attributedText, containsAttribute: (.stylizerWritingDirection, NSWritingDirection.leftToRight, NSWritingDirection.rightToLeft), inRange: range)
+                                AssertAttributedString(attributedText, containsAttribute: (.stylizerWritingDirection, "ltr", "rtl"), inRange: range)
                                 AssertAttributedString(attributedText, doesNotContainAttribute: .stylizerWritingDirection, inRange: NSRange(location: 0, length: range.lowerBound))
 
                             default:

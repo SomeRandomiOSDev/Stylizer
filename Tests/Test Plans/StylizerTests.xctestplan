@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "96E8126C-081F-40B8-A942-44EA7A558794",
+      "name" : "Default",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Stylizer.xcodeproj",
+          "identifier" : "DD86D53C23D11B3E0046E63E",
+          "name" : "Stylizer"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Stylizer.xcodeproj",
+        "identifier" : "DD86D54523D11B3E0046E63E",
+        "name" : "StylizerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

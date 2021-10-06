@@ -30,7 +30,7 @@ class StylizerTestCase: XCTestCase {
 
     class func iterateAllPermutations<C>(for styles: C, using block: (String, [String]) -> Void) where C: Collection, C.Element: PatternStringsConvertible, C.Element: Hashable, C.Element: CaseIterable {
         let inputStyles = Set(styles).sorted { $0.patternStrings.text < $1.patternStrings.text }
-        let permutedStyles = allPermutations(of: inputStyles)
+        let permutedStyles = setupForCurrentTestPlan(allPermutations(of: inputStyles), max: 5000)
 
         DispatchQueue.concurrentPerform(iterations: permutedStyles.count) { i in
             autoreleasepool {
@@ -53,7 +53,7 @@ class StylizerTestCase: XCTestCase {
 
     class func iterateAllNestedPermutations<C>(for styles: C, using block: (String, [String]) -> Void) where C: Collection, C.Element: NestableStringsConvertible, C.Element: Hashable, C.Element: CaseIterable {
         let inputStyles = Set(styles).sorted { $0.nestableStrings.text < $1.nestableStrings.text }
-        let permutedStyles = allPermutations(of: toArray(inputStyles))
+        let permutedStyles = setupForCurrentTestPlan(allPermutations(of: toArray(inputStyles)), max: 5000)
 
         DispatchQueue.concurrentPerform(iterations: permutedStyles.count) { i in
             autoreleasepool {
@@ -80,6 +80,24 @@ class StylizerTestCase: XCTestCase {
                 block(key, values.map { $0.reduce("") { $0.contains("%@") ? $0.replacingOccurrences(of: "%@", with: ", \($1)") : $1 }.replacingOccurrences(of: "%@", with: "") })
             }
         }
+    }
+
+    class func setupForCurrentTestPlan<C>(_ collection: C, max: Int = .max) -> [C.Element] where C: Collection {
+        let processedCollection: [C.Element]
+        let max = (max >= 1) ? max : .max
+
+        if ProcessInfo.processInfo.environment["FULL_TESTS"] == "1" {
+            processedCollection = Array(collection)
+        } else {
+            processedCollection = collection.enumerated()
+                                            .filter { ($0.offset % 2) == 0 }
+                                            .map { $0.element }
+                                            .enumerated()
+                                            .filter { $0.offset < max }
+                                            .map { $0.element }
+        }
+
+        return processedCollection
     }
 
     //
